@@ -109,7 +109,3 @@ The test suite uses [NUnit](https://nunit.org/), [FluentAssertions](https://flue
 ```powershell
 dotnet run -c Release --project BenchmarkSuite1
 ```
-
-## License
-
-This project is provided as-is for educational and demonstration purposes.
