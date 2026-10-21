@@ -18,7 +18,6 @@ A lightweight, reflection-based dependency injection container for .NET 9, built
 | Project | Description |
 |---|---|
 | `LightweightDI` | The core container implementation (`Container`, `ServiceRegistration`, `Lifetime`, `ResolutionException`). |
-| `LightweightDI.Tests` | xUnit test suite covering mapping, lifetimes, nested injection, error handling, instance registration, mocking, and disposal. |
 | `LightweightDI.Tests` | NUnit test suite covering mapping, lifetimes, nested injection, error handling, instance registration, mocking, disposal, and concurrency. |
 | `BenchmarkSuite1` | BenchmarkDotNet benchmarks measuring container resolution performance (e.g. singleton vs. transient dependency graphs). |
 
@@ -90,7 +89,6 @@ All resolution and registration failures surface as `ResolutionException` (for r
 
 ## Testing
 
-The test suite uses [xUnit](https://xunit.net/), [FluentAssertions](https://fluentassertions.com/), and [Moq](https://github.com/devlooped/moq), organized into category-specific files:
 The test suite uses [NUnit](https://nunit.org/), [FluentAssertions](https://fluentassertions.com/), and [Moq](https://github.com/devlooped/moq), organized into category-specific files:
 
 - `MappingTests` — abstraction-to-implementation resolution
@@ -99,7 +97,6 @@ The test suite uses [NUnit](https://nunit.org/), [FluentAssertions](https://flue
 - `ErrorHandlingTests` — failure paths and validation
 - `InstanceRegistrationTests` — `RegisterInstance` behavior
 - `MockingTests` — Moq-based mocked dependency injection
-- `DisposalTests` — disposal tracking and ordering
 - `DisposalTests` — disposal tracking/ordering and concurrent resolve-vs-dispose safety
 
 ## Benchmarks
@@ -109,3 +106,7 @@ The test suite uses [NUnit](https://nunit.org/), [FluentAssertions](https://flue
 ```powershell
 dotnet run -c Release --project BenchmarkSuite1
 ```
+
+## License
+
+This project is provided as-is for educational and demonstration purposes.
